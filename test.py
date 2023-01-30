@@ -72,3 +72,8 @@ def read_data():
   db_session.commit()
 
 read_data()
+
+db = db_session.query(Wine).all()
+for row in db:
+  # カラムを指定してデータを取得する
+  print(row.alcohol)
